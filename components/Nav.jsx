@@ -21,12 +21,12 @@ export default function Nav() {
     }, []);
     
     return (
-        <div style={{ backgroundColor:`${color}`}} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
+        <div style={{backgroundColor:color}} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
             <div className="max-w-[1240px] m-auto flex justify-between items-center p-4">
                 <Link href='/'>
-                    <h1 style={{ color:`${textColor}`}} className="font-bold text-4xl">CP</h1>
+                    <h1 style={{color:textColor}} className="font-bold text-4xl">CP</h1>
                 </Link>
-                <ul style={{ color:`${textColor}`}} className="hidden sm:flex">
+                <ul style={{ color:textColor}} className="hidden sm:flex">
                     <li className="p-4"><Link href='/'>Home</Link></li>
                     <li className="p-4"><Link href='/#gallery'>Gallery</Link></li>
                     <li className="p-4"><Link href='/work'>Work</Link></li>
@@ -34,7 +34,7 @@ export default function Nav() {
                 </ul>
                 
                 <div className="block sm:hidden z-10" onClick={handleNav}>
-                    {nav ? <AiOutlineClose size={20} style={{color: 'white'}} /> : <AiOutlineMenu size={20} style={{ color:`${textColor}`}} />}
+                    {nav ? <AiOutlineClose size={20} style={{color:'white'}} /> : <AiOutlineMenu size={20} style={{ color:textColor}} />}
                 </div>
                 <div className={nav ? 'sm:hidden absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' : 'sm:hidden absolute top-0 left-[-100%] bottom-0 right-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'}>
                     <ul style={{ color:'white'}}>
